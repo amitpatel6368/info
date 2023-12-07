@@ -1,0 +1,122 @@
+// =============================================================================
+// STRING REPLACE
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+
+// =============================================================================
+// FONT FACE
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+// TRANSITION
+@mixin transition_03 {
+	-webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+}
+@mixin transition_05 {
+	-webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    -ms-transition: 0.5s all ease-in-out;
+    -o-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+}
+
+
+// NEUMORPHISM SHADOW EFFECT
+@mixin neumorphismShadow {
+	border-radius: 20px;
+	box-shadow: inset 0 0 15px rgba(55, 84, 170, 0),
+	inset 0 0 20px rgba(255, 255, 255, 0),
+	7px 7px 15px rgba(55, 84, 170, .15),
+	-7px -7px 20px rgba(255, 255, 255, 1),
+	inset 0px 0px 4px rgba(255, 255, 255, .2) !important;
+}
+@mixin neumorphismShadowHover {
+	border-radius: 20px;
+	box-shadow: inset 7px 7px 15px rgba(55, 84, 170, .15),
+	inset -7px -7px 20px rgba(255, 255, 255, 1),
+	0px 0px 4px rgba(255, 255, 255, .2) !important;
+}
+
+@mixin neumorphismShadow_Alt {
+	border-radius: 20px;
+	box-shadow: inset 7px 7px 15px rgba(55, 84, 170, .15),
+	inset -7px -7px 20px rgba(255, 255, 255, 1),
+	0px 0px 4px rgba(255, 255, 255, .2) !important;
+}
+@mixin neumorphismShadowHover_Alt {
+	border-radius: 20px;
+	box-shadow: inset 0 0 15px rgba(55, 84, 170, 0),
+	inset 0 0 20px rgba(255, 255, 255, 0),
+	7px 7px 15px rgba(55, 84, 170, .15),
+	-7px -7px 20px rgba(255, 255, 255, 1),
+	inset 0px 0px 4px rgba(255, 255, 255, .2) !important;
+}
+
+
+// CUSTOM BUTTON
+@mixin customBtn {
+	background-color: $bgColor !important;
+	border: 0 !important;
+	border-radius: 10px !important;
+	color: $mainColor !important;
+	font-weight: 700 !important;
+	padding: 12px 24px !important;
+	-webkit-transition: .2s all;
+	-moz-transition: .2s all;
+	-ms-transition: .2s all;
+	-o-transition: .2s all;
+	transition: .2s all;
+	box-shadow: inset 0 0 15px rgba(55, 84, 170, 0),
+	inset 0 0 20px rgba(255, 255, 255, 0),
+	7px 7px 15px rgba(55, 84, 170, .15),
+	-7px -7px 20px rgba(255, 255, 255, 1),
+	inset 0px 0px 4px rgba(255, 255, 255, .2);
+	@include transition_03;
+}
+@mixin customBtnHover {
+	box-shadow: inset 7px 7px 15px rgba(55, 84, 170, .15),
+	inset -7px -7px 20px rgba(255, 255, 255, 1),
+	0px 0px 4px rgba(255, 255, 255, .2);
+	@include transition_03;
+}

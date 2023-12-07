@@ -1,0 +1,822 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../fonts/Roboto-Regular.eot?") format("eot"), url("./../fonts/Roboto-Regular.svg#Roboto") format("svg"), url("./../fonts/Roboto-Regular.ttf") format("truetype"), url("./../fonts/Roboto-Regular.woff2") format("woff2"), url("./../fonts/Roboto-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./../fonts/Roboto-Medium.eot?") format("eot"), url("./../fonts/Roboto-Medium.svg#Roboto") format("svg"), url("./../fonts/Roboto-Medium.ttf") format("truetype"), url("./../fonts/Roboto-Medium.woff2") format("woff2"), url("./../fonts/Roboto-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./../fonts/Roboto-Bold.eot?") format("eot"), url("./../fonts/Roboto-Bold.svg#Roboto") format("svg"), url("./../fonts/Roboto-Bold.ttf") format("truetype"), url("./../fonts/Roboto-Bold.woff2") format("woff2"), url("./../fonts/Roboto-Bold.woff") format("woff"); }
+
+body {
+  background: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  color: #44566C;
+  letter-spacing: .25px;
+  line-height: 24px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700 !important; }
+
+p,
+a,
+ul li,
+ol li,
+button,
+label,
+input,
+select,
+optgroup,
+textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400 !important;
+  font-size: 14px; }
+
+button.customBtn,
+a.customBtn {
+  background-color: #f1f1f1 !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  color: #776CE1 !important;
+  font-weight: 700 !important;
+  padding: 12px 24px !important;
+  -webkit-transition: .2s all;
+  -moz-transition: .2s all;
+  -ms-transition: .2s all;
+  -o-transition: .2s all;
+  transition: .2s all;
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+  button.customBtn:hover, button.customBtn:focus,
+  a.customBtn:hover,
+  a.customBtn:focus {
+    box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  button.customBtn.btn-sm,
+  a.customBtn.btn-sm {
+    border-radius: 8px !important;
+    padding: 8px 16px !important; }
+  button.customBtn.btn-lg,
+  a.customBtn.btn-lg {
+    border-radius: 12px !important;
+    padding: 14px 28px !important; }
+
+.neumorphismBox {
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+
+.neumorphismBoxHoverable {
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+  .neumorphismBoxHoverable:hover {
+    border-radius: 20px;
+    box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+
+.neumorphismBox_Alt {
+  border-radius: 20px;
+  box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+
+.neumorphismBoxHoverable_Alt {
+  border-radius: 20px;
+  box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+  .neumorphismBoxHoverable_Alt:hover {
+    border-radius: 20px;
+    box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+
+input.form-control,
+select.form-control,
+textarea.form-control {
+  background: #f1f1f1 !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  color: #44566C !important;
+  font-size: 14px !important;
+  letter-spacing: .25px !important;
+  min-height: 48px !important;
+  padding: 12px 24px !important;
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 transparent !important;
+  background: #f1f1f1 !important;
+  border-radius: 20px;
+  box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
+
+textarea {
+  resize: none; }
+
+[type="checkbox"]:focus + label::before,
+[type="radio"]:focus + label::before {
+  box-shadow: none !important; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #776CE1 !important;
+  font-size: 14px !important;
+  letter-spacing: .25px !important; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #776CE1 !important;
+  font-size: 14px !important;
+  letter-spacing: .25px !important; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #776CE1 !important;
+  font-size: 14px !important;
+  letter-spacing: .25px !important; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #776CE1 !important;
+  font-size: 14px !important;
+  letter-spacing: .25px !important; }
+
+::-webkit-scrollbar {
+  /* WIDTH */
+  width: 8px; }
+
+::-webkit-scrollbar-track {
+  /* TRACK */
+  background: #000000; }
+
+::-webkit-scrollbar-thumb {
+  /* HANDLE */
+  background: #776CE1;
+  border: 1px solid #000000; }
+
+::-webkit-scrollbar-thumb:hover {
+  /* HANDLE ON HOVER */
+  background: #776CE1; }
+
+::-moz-selection {
+  background: #776CE1;
+  color: #FFFFFF; }
+
+::selection {
+  background: #776CE1;
+  color: #FFFFFF; }
+
+::-moz-selection {
+  background: #776CE1;
+  color: #FFFFFF; }
+
+::-o-selection {
+  background: #776CE1;
+  color: #FFFFFF; }
+
+::-ms-selection {
+  background: #776CE1;
+  color: #FFFFFF; }
+
+::-webkit-selection {
+  background: #776CE1;
+  color: #FFFFFF; }
+
+@media screen and (max-width: 576px) {
+  main {
+    padding: 0 24px !important; } }
+
+main section.my_profile_container {
+  padding: 80px 0 24px; }
+  @media screen and (max-width: 768px) {
+    main section.my_profile_container {
+      padding: 30px 0 16px; } }
+  @media screen and (max-width: 768px) {
+    main section.my_profile_container {
+      padding: 24px 0 16px; } }
+  main section.my_profile_container div.left_profile_section div.img_box {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background: #f1f1f1;
+    border: 16px solid #f1f1f1;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+    main section.my_profile_container div.left_profile_section div.img_box:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+      /* initial ratio of 1:1*/ }
+    main section.my_profile_container div.left_profile_section div.img_box img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      line-height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%; }
+  main section.my_profile_container div.left_profile_section h3.profile_name span.first_name {
+    font-weight: 400; }
+  main section.my_profile_container div.left_profile_section hr {
+    border: 3px solid #776CE1;
+    border-radius: 3px; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li a.media {
+    text-decoration: none;
+    align-items: start; }
+    main section.my_profile_container div.left_profile_section ul.profile_info_listing li a.media div.icon_box {
+      width: 34px;
+      height: 34px;
+      background: transparent;
+      border-radius: 34px;
+      line-height: 37px;
+      text-align: center;
+      display: inline-block; }
+      main section.my_profile_container div.left_profile_section ul.profile_info_listing li a.media div.icon_box i {
+        font-size: 16px; }
+    main section.my_profile_container div.left_profile_section ul.profile_info_listing li a.media div.media-body p {
+      color: #44566C;
+      line-break: anywhere;
+      margin-top: 6.5px;
+      -webkit-transition: 0.3s all ease-in-out;
+      -moz-transition: 0.3s all ease-in-out;
+      -ms-transition: 0.3s all ease-in-out;
+      -o-transition: 0.3s all ease-in-out;
+      transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(1) div.media div.icon_box {
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border-radius: 34px;
+    line-height: 37px;
+    text-align: center;
+    display: inline-block; }
+    main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(1) div.media div.icon_box i.fas.fa-birthday-cake {
+      color: #ff9800;
+      font-size: 16px; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(1) div.media div.media-body p {
+    color: #44566C;
+    margin-top: 6.5px;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(1) div.media:hover div.media-body p {
+    color: #ff9800;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(2) a.media div.icon_box i.fas.fa-envelope-open-text {
+    color: #F44336; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(2) a.media:hover div.media-body p {
+    color: #F44336;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(3) a.media div.icon_box i.fas.fa-mobile-alt {
+    color: #4CAF50; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(3) a.media:hover div.media-body p {
+    color: #4CAF50;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(4) a.media div.icon_box i.fas.fa-map-marker-alt {
+    color: #776CE1; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(4) a.media:hover div.media-body p {
+    color: #776CE1;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(5) a.media div.icon_box i.fab.fa-skype {
+    color: #00aff0; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(5) a.media:hover div.media-body p {
+    color: #00aff0;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(6) a.media div.icon_box i.fab.fa-linkedin-in {
+    color: #0e76a8; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:nth-child(6) a.media:hover div.media-body p {
+    color: #0e76a8;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  main section.my_profile_container div.left_profile_section ul.profile_info_listing li:last-child {
+    margin-bottom: 0 !important; }
+  main section.my_profile_container div.left_profile_section div.social_links_box a {
+    text-decoration: none; }
+    main section.my_profile_container div.left_profile_section div.social_links_box a div.icon_box {
+      width: 34px;
+      height: 34px;
+      background: transparent;
+      border-radius: 34px;
+      line-height: 37px;
+      text-align: center;
+      display: inline-block; }
+      main section.my_profile_container div.left_profile_section div.social_links_box a div.icon_box i {
+        font-size: 16px; }
+        main section.my_profile_container div.left_profile_section div.social_links_box a div.icon_box i.fab.fa-facebook-f {
+          color: #3b5998; }
+        main section.my_profile_container div.left_profile_section div.social_links_box a div.icon_box i.fab.fa-instagram {
+          color: #9b6954; }
+        main section.my_profile_container div.left_profile_section div.social_links_box a div.icon_box i.fab.fa-whatsapp {
+          color: #25d366; }
+  main section.my_profile_container div.right_profile_section ul.nav-tabs {
+    display: none;
+    margin-bottom: 32px; }
+  main section.my_profile_container div.right_profile_section div.card {
+    background: transparent;
+    border-radius: 0 !important; }
+    main section.my_profile_container div.right_profile_section div.card div.collapse {
+      display: block; }
+    main section.my_profile_container div.right_profile_section div.card div.card-header {
+      display: none; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.about_me_container hr {
+      width: 60px;
+      border: 3px solid #776CE1;
+      border-radius: 3px; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.about_me_container p.text:last-child {
+      margin-bottom: 0; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box {
+      min-height: 56px;
+      height: calc(100% - 64px);
+      margin-top: 64px;
+      position: relative;
+      -webkit-transition: 0.3s all ease-in-out;
+      -moz-transition: 0.3s all ease-in-out;
+      -ms-transition: 0.3s all ease-in-out;
+      -o-transition: 0.3s all ease-in-out;
+      transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box div.top_box {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        padding: 0 16px 16px; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box div.top_box div.icon_box {
+          width: 80px;
+          height: 80px;
+          background: #f1f1f1;
+          border-radius: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          border-radius: 20px;
+          box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+          -webkit-transition: 0.3s all ease-in-out;
+          -moz-transition: 0.3s all ease-in-out;
+          -ms-transition: 0.3s all ease-in-out;
+          -o-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out; }
+          main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box div.top_box div.icon_box i {
+            font-size: 36px;
+            -webkit-transition: 0.3s all ease-in-out;
+            -moz-transition: 0.3s all ease-in-out;
+            -ms-transition: 0.3s all ease-in-out;
+            -o-transition: 0.3s all ease-in-out;
+            transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box h6.title_text {
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box:hover div.top_box div.icon_box {
+        transform: translate(-16px, -10px);
+        border-radius: 20px;
+        box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box:hover div.top_box div.icon_box i {
+          color: #776CE1;
+          -webkit-transition: 0.3s all ease-in-out;
+          -moz-transition: 0.3s all ease-in-out;
+          -ms-transition: 0.3s all ease-in-out;
+          -o-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box:hover h6.title_text {
+        color: #776CE1;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.about_me_body div.my_services_container div.services_box p.text {
+        margin-top: 40px; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container hr {
+      width: 60px;
+      border: 3px solid #776CE1;
+      border-radius: 3px; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing li {
+      position: relative; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing li:before {
+        content: "";
+        width: 1px;
+        height: calc(100% + 24px);
+        background: #776CE1;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -20px; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing li:last-child:before {
+        display: none; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing li:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: #f1f1f1;
+        border: 4px solid #776CE1;
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -27px; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing li:last-child {
+        margin-bottom: 0 !important; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li {
+      display: flex;
+      justify-content: start;
+      align-items: center; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li div.img_box {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        overflow: hidden;
+        margin: 0 auto; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li div.img_box:before {
+          content: "";
+          display: block;
+          padding-top: 100%;
+          /* initial ratio of 1:1*/ }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li div.img_box img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          line-height: 100%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          height: 100%; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li div.progress {
+        background: #f1f1f1;
+        border-radius: 16px;
+        border-radius: 20px;
+        box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li div.progress div.progress-bar {
+          border-radius: 16px; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.html_box div.progress div.progress-bar {
+        background: #e34f26; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.css_box div.progress div.progress-bar {
+        background: #1b73ba; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.sass_box div.progress div.progress-bar {
+        background: #cc6699; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.bootstrap_box div.progress div.progress-bar {
+        background: #713dbe; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.js_box div.progress div.progress-bar {
+        background: #f0db4f; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.jquery_box div.progress div.progress-bar {
+        background: #172d45; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.psd_box div.progress div.progress-bar {
+        background: #95c9fe; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.ai_box div.progress div.progress-bar {
+        background: #ff7c00; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.xd_box div.progress div.progress-bar {
+        background: #fd60f4; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.cdr_box div.progress div.progress-bar {
+        background: #64a90a; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.figma_box div.progress div.progress-bar {
+        background: #F24E1E; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li.scatch_box div.progress div.progress-bar {
+        background: #FCAC00; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.resume_body div.resume_container ul.table_listing_skills li:last-child {
+        margin-bottom: 0 !important; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container hr {
+      width: 60px;
+      border: 3px solid #776CE1;
+      border-radius: 3px; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card {
+      background: #f1f1f1;
+      border-radius: 20px !important;
+      margin-bottom: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+      -webkit-transition: 0.3s all ease-in-out;
+      -moz-transition: 0.3s all ease-in-out;
+      -ms-transition: 0.3s all ease-in-out;
+      -o-transition: 0.3s all ease-in-out;
+      transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card div.card-header {
+        background: transparent;
+        display: block;
+        position: relative;
+        padding: 16px !important;
+        padding-bottom: 0 !important; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card div.card-header div.img_box {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border: 1px solid #FFFFFF;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+          overflow: hidden;
+          margin: 0 auto;
+          -webkit-transition: 0.3s all ease-in-out;
+          -moz-transition: 0.3s all ease-in-out;
+          -ms-transition: 0.3s all ease-in-out;
+          -o-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out; }
+          main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card div.card-header div.img_box:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+            /* initial ratio of 1:1*/ }
+          main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card div.card-header div.img_box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            line-height: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+            object-position: top;
+            width: 100%;
+            height: 100%; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card div.card-header div.btn_overlay {
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          position: absolute;
+          top: -100%;
+          left: 0;
+          -webkit-transform: translate(0, 0);
+          -moz-transform: translate(0, 0);
+          -ms-transform: translate(0, 0);
+          -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+          -webkit-transition: 0.3s all ease-in-out;
+          -moz-transition: 0.3s all ease-in-out;
+          -ms-transition: 0.3s all ease-in-out;
+          -o-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card:hover {
+        border-radius: 20px;
+        box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card:hover div.card-header div.img_box {
+          opacity: 0;
+          -webkit-transition: 0.3s all ease-in-out;
+          -moz-transition: 0.3s all ease-in-out;
+          -ms-transition: 0.3s all ease-in-out;
+          -o-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out; }
+        main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card:hover div.card-header div.btn_overlay {
+          position: absolute;
+          top: 0;
+          -webkit-transition: 0.3s all ease-in-out;
+          -moz-transition: 0.3s all ease-in-out;
+          -ms-transition: 0.3s all ease-in-out;
+          -o-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body.portfolio_body div.portfolio_container div.card.portfolio_card div.card-body {
+        border-radius: 0;
+        margin: 0; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.contact_body div.contact_container hr {
+      width: 60px;
+      border: 3px solid #776CE1;
+      border-radius: 3px; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.contact_body div.contact_container div.form-group .form-control {
+      padding-right: 38px !important; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.contact_body div.contact_container div.form-group span.error-message {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: auto;
+      font-size: 18px;
+      margin-top: 1px; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.contact_body div.contact_container div.form-group textarea.form-control::-webkit-scrollbar-track {
+      /* TRACK */
+      background: #000000;
+      border-top-right-radius: 8px !important;
+      border-bottom-right-radius: 8px !important; }
+    main section.my_profile_container div.right_profile_section div.card div.card-body.contact_body div.contact_container div.form-group textarea.form-control::-webkit-scrollbar-thumb {
+      /* HANDLE */
+      background: #776CE1;
+      border: 1px solid #000000;
+      border-top-right-radius: 8px !important;
+      border-bottom-right-radius: 8px !important; }
+  @media (min-width: 769px) {
+    main section.my_profile_container div.right_profile_section ul.nav-tabs {
+      display: flex; }
+      main section.my_profile_container div.right_profile_section ul.nav-tabs li.nav-item a.nav-link {
+        color: #776CE1 !important;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+        main section.my_profile_container div.right_profile_section ul.nav-tabs li.nav-item a.nav-link.active {
+          color: #44566C !important;
+          border-radius: 20px;
+          box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+          position: relative; }
+    main section.my_profile_container div.right_profile_section div.tab-content {
+      border-radius: 20px;
+      box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+    main section.my_profile_container div.right_profile_section div.card div.collapse {
+      display: block; }
+    main section.my_profile_container div.right_profile_section div.card div.card-header {
+      display: none; } }
+  @media (max-width: 768px) {
+    main section.my_profile_container div.right_profile_section div.tab-content > div.tab-pane {
+      display: block !important;
+      opacity: 1; }
+    main section.my_profile_container div.right_profile_section div.card {
+      margin-bottom: 32px; }
+      main section.my_profile_container div.right_profile_section div.card:last-child {
+        margin-bottom: 0; }
+        main section.my_profile_container div.right_profile_section div.card:last-child div.card-body {
+          margin-bottom: 0; }
+      main section.my_profile_container div.right_profile_section div.card div.collapse:not(.show) {
+        display: none; }
+      main section.my_profile_container div.right_profile_section div.card div.card-header {
+        display: block;
+        background: transparent; }
+        main section.my_profile_container div.right_profile_section div.card div.card-header h6 a {
+          color: #44566C !important;
+          border-radius: 20px;
+          box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+          position: relative; }
+          main section.my_profile_container div.right_profile_section div.card div.card-header h6 a:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f106";
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            right: 24px;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: 1; }
+          main section.my_profile_container div.right_profile_section div.card div.card-header h6 a.collapsed {
+            color: #776CE1 !important;
+            border-radius: 20px;
+            box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+            main section.my_profile_container div.right_profile_section div.card div.card-header h6 a.collapsed:after {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f107"; }
+      main section.my_profile_container div.right_profile_section div.card div.card-body {
+        border-radius: 20px;
+        box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+        margin: 16px 0 32px; } }
+
+footer p.text {
+  padding: 16px 0; }
+
+div.swal-overlay {
+  background: #f1f1f1 !important; }
+  div.swal-overlay div.swal-modal {
+    background: #f1f1f1 !important;
+    border-radius: 20px;
+    box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important; }
+    @media screen and (max-width: 576px) {
+      div.swal-overlay div.swal-modal {
+        width: calc(100% - 48px); } }
+    div.swal-overlay div.swal-modal div.swal-icon--success {
+      border-color: #00C853 !important; }
+      div.swal-overlay div.swal-modal div.swal-icon--success span.swal-icon--success__line {
+        background: #00C853 !important; }
+      div.swal-overlay div.swal-modal div.swal-icon--success:before, div.swal-overlay div.swal-modal div.swal-icon--success:after,
+      div.swal-overlay div.swal-modal div.swal-icon--success div.swal-icon--success__hide-corners {
+        background: transparent !important; }
+    div.swal-overlay div.swal-modal div.swal-icon--error {
+      border-color: #F44336 !important; }
+      div.swal-overlay div.swal-modal div.swal-icon--error span.swal-icon--error__line {
+        background: #F44336 !important; }
+    div.swal-overlay div.swal-modal div.swal-title,
+    div.swal-overlay div.swal-modal div.swal-text {
+      color: #44566C !important;
+      text-align: center !important; }
+    div.swal-overlay div.swal-modal div.swal-footer {
+      text-align: center !important;
+      margin-bottom: 19px !important; }
+      div.swal-overlay div.swal-modal div.swal-footer button.swal-button {
+        background-color: #f1f1f1 !important;
+        border: 0 !important;
+        border-radius: 10px !important;
+        color: #776CE1 !important;
+        font-weight: 700 !important;
+        padding: 12px 24px !important;
+        -webkit-transition: .2s all;
+        -moz-transition: .2s all;
+        -ms-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+        box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
+        letter-spacing: 0.25px !important; }
+        div.swal-overlay div.swal-modal div.swal-footer button.swal-button:hover {
+          box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
+          -webkit-transition: 0.3s all ease-in-out;
+          -moz-transition: 0.3s all ease-in-out;
+          -ms-transition: 0.3s all ease-in-out;
+          -o-transition: 0.3s all ease-in-out;
+          transition: 0.3s all ease-in-out; }
